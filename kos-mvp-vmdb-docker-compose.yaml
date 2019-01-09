@@ -1,0 +1,37 @@
+version: '3'
+services:
+  usagedata:
+    #    build: ./retrieve-usagedata-svc
+    image: kos-mvp/usagedata
+    environment:
+      target.service.name: usagedata-db:8080
+      spring.redis.host: redis
+    ports:
+     - "8080:8080"
+    links:
+     - usagedata-db
+     - redis
+
+  usagedata-db:
+    #    build: ./retrieve-usagedata-db-svc
+    image: kos-mvp/usagedata-db
+    environment:
+      target.service.name: manage-cache:8080
+      spring.datasource.url: jdbc:postgresql://169.56.74.8:5432/garage
+      spring.datasource.username: kos_user
+      spring.datasource.password: new1234!
+    links:
+     - manage-cache
+
+  manage-cache:
+    #    build: ./redis-cache-manager
+    image: kos-mvp/manage-cache
+    environment: 
+      spring.redis.host: redis
+    links:
+     - redis
+
+  redis:
+    image: "redis:alpine"
+
+

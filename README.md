@@ -1,4 +1,12 @@
 
+## 요약
+1. STS or Eclipse 에서 compile 및 docker build 까지 가능합니다. 빌드가 필요하시면 아래 내용 참고하세요.
+2. Dockerfile 들이 간편하게 수정되었습니다. (각 프로젝트 src/main/docker 위치)
+3. docker-compose 명령으로 모든 container가 정상 동작합니다.
+   - kos-mvp-vmdb-docker-compose.yaml 로 실행하면, external VM DB에 접속하여 기능이 됩니다. 
+   - kos-mvp-docker-compose.yaml 로 실행하면, container db로 접속합니다만, 데이터가 없어서 결과가 없습니다. (db insert 하며 됩니다.)
+     (물리 공간 생성방식이니 insert 하시면 됩니다.)
+
 
 
 

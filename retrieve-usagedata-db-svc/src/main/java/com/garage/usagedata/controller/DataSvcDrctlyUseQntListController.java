@@ -22,6 +22,9 @@ import com.garage.usagedata.bean.Data_DataSvcDrctlyUseQntList;
 import com.garage.usagedata.bean.PK_DataSvcDrctlyUseQntList;
 import com.garage.usagedata.repository.DataSvcDrctlyUseQntListRepository;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 @RequestMapping("/usage/dataSvcDrctlyUseQntList")
 public class DataSvcDrctlyUseQntListController {
@@ -38,7 +41,7 @@ public class DataSvcDrctlyUseQntListController {
 	@GetMapping("/{svcContId}/{retvDt}")
 	public ResponseEntity<Data_DataSvcDrctlyUseQntList> getData(@PathVariable("svcContId") String svcContId, @PathVariable("retvDt") String retvDt) {
 		
-		System.out.println("Get Data with ID = " + svcContId + ", " + retvDt + "...");
+		log.debug("Get Data with ID = " + svcContId + ", " + retvDt + "...");
 		Optional<Data_DataSvcDrctlyUseQntList> data = repository.findById(new PK_DataSvcDrctlyUseQntList(svcContId, retvDt));
 		
 		// db에 있는 경우
@@ -62,14 +65,14 @@ public class DataSvcDrctlyUseQntListController {
 	
 	@PostMapping("/create")
 	public Data_DataSvcDrctlyUseQntList createData(@Valid @RequestBody Data_DataSvcDrctlyUseQntList data) {
-		System.out.println("Create Data : " + data.toString() + "...");
+		log.debug("Create Data : " + data.toString() + "...");
 
 		return repository.save(data);
 	}
 	
 	@PutMapping("/{svcContId}/{retvDt}")
 	public ResponseEntity<Data_DataSvcDrctlyUseQntList> updateData(@PathVariable("svcContId") String svcContId, @PathVariable("retvDt") String retvDt, @RequestBody Data_DataSvcDrctlyUseQntList data) {
-		System.out.println("Update Data with ID = " + svcContId + ", " + retvDt + "...");
+		log.debug("Update Data with ID = " + svcContId + ", " + retvDt + "...");
 
 		Optional<Data_DataSvcDrctlyUseQntList> findedData = repository.findById(new PK_DataSvcDrctlyUseQntList(svcContId, retvDt));
 		if (findedData.isPresent()) {
@@ -98,7 +101,7 @@ public class DataSvcDrctlyUseQntListController {
 
 	@DeleteMapping("/{svcContId}/{retvDt}")
 	public ResponseEntity<String> deleteData(@PathVariable("svcContId") String svcContId, @PathVariable("retvDt") String retvDt) {
-		System.out.println("Delete Data with ID = " + svcContId + ", " + retvDt + "...");
+		log.debug("Delete Data with ID = " + svcContId + ", " + retvDt + "...");
 
 		try {
 			repository.deleteById(new PK_DataSvcDrctlyUseQntList(svcContId, retvDt));

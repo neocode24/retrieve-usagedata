@@ -16,6 +16,9 @@ import com.garage.usagedata.bean.PK_UsePtrn3monsRetv;
 import com.garage.usagedata.repository.DataSvcDrctlyUseQntListRepository;
 import com.garage.usagedata.repository.UsePtrn3monsRetvRepository;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RetrieveUsagedataDbSvcApplicationTests {
@@ -39,8 +42,8 @@ public class RetrieveUsagedataDbSvcApplicationTests {
 		
 		Data_DataSvcDrctlyUseQntList data = dataSvcDrctlyUseQntListRepository.findById(new PK_DataSvcDrctlyUseQntList(svcContId, retvDt)).get();
 		
-		System.out.println(data.toString());
-		System.out.println(data.getProdNm());
+		log.debug(data.toString());
+		log.debug(data.getProdNm());
         
         
         assertThat(data.getSvcContId()).isEqualTo("580095369");
@@ -54,8 +57,8 @@ public class RetrieveUsagedataDbSvcApplicationTests {
 		
 		Data_UsePtrn3monsRetv data = usePtrn3monsRetvRepositoryRepository.findById(new PK_UsePtrn3monsRetv(svcContId, retvYm)).get();
 		
-		System.out.println(data.toString());
-		System.out.println(data.getNtnlVcTlkTotQnt());
+		log.debug(data.toString());
+		log.debug(data.getNtnlVcTlkTotQnt());
 		
 		
 		assertThat(data.getSvcContId()).isEqualTo("680350947");

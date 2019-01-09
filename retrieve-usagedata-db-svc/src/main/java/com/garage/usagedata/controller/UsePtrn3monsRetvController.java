@@ -22,6 +22,9 @@ import com.garage.usagedata.bean.Data_UsePtrn3monsRetv;
 import com.garage.usagedata.bean.PK_UsePtrn3monsRetv;
 import com.garage.usagedata.repository.UsePtrn3monsRetvRepository;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 @RequestMapping("/usage/usePtrn3monsRetv")
 public class UsePtrn3monsRetvController {
@@ -38,7 +41,7 @@ public class UsePtrn3monsRetvController {
 	@GetMapping("/{svcContId}/{retvYm}")
 	public ResponseEntity<Data_UsePtrn3monsRetv> getData(@PathVariable("svcContId") String svcContId, @PathVariable("retvYm") String retvYm) {
 		
-		System.out.println("Get Data with ID = " + svcContId + ", " + retvYm + "...");
+		log.debug("Get Data with ID = " + svcContId + ", " + retvYm + "...");
 		Optional<Data_UsePtrn3monsRetv> data = repository.findById(new PK_UsePtrn3monsRetv(svcContId, retvYm));
 		
 		// db에 있는 경우
@@ -49,11 +52,11 @@ public class UsePtrn3monsRetvController {
 			
 			String url = "http://" + targetServiceName + "/cache/create/" + redisKey;
 			
-			System.out.println("url:" + url);
+			log.debug("url:" + url);
 			
 			// 결과를 Cache Manager로 전달. cache 반영 처리 위임.
 			ResponseEntity<String> cacheResult = restTemplate.postForEntity(url, data.get(), String.class);
-			System.out.println("cache result : " + cacheResult.getBody());
+			log.debug("cache result : " + cacheResult.getBody());
 			
 			return new ResponseEntity<>(data.get(), HttpStatus.OK);
 		} 
@@ -65,14 +68,14 @@ public class UsePtrn3monsRetvController {
 	
 	@PostMapping("/create")
 	public Data_UsePtrn3monsRetv createData(@Valid @RequestBody Data_UsePtrn3monsRetv data) {
-		System.out.println("Create Data : " + data.toString() + "...");
+		log.debug("Create Data : " + data.toString() + "...");
 
 		return repository.save(data);
 	}
 	
 	@PutMapping("/{svcContId}/{retvYm}")
 	public ResponseEntity<Data_UsePtrn3monsRetv> updateData(@PathVariable("svcContId") String svcContId, @PathVariable("retvYm") String retvYm, @RequestBody Data_UsePtrn3monsRetv data) {
-		System.out.println("Update Data with ID = " + svcContId + ", " + retvYm + "...");
+		log.debug("Update Data with ID = " + svcContId + ", " + retvYm + "...");
 
 		Optional<Data_UsePtrn3monsRetv> findedData = repository.findById(new PK_UsePtrn3monsRetv(svcContId, retvYm));
 		if (findedData.isPresent()) {
@@ -95,7 +98,7 @@ public class UsePtrn3monsRetvController {
 
 	@DeleteMapping("/{svcContId}/{retvYm}")
 	public ResponseEntity<String> deleteData(@PathVariable("svcContId") String svcContId, @PathVariable("retvYm") String retvYm) {
-		System.out.println("Delete Data with ID = " + svcContId + ", " + retvYm + "...");
+		log.debug("Delete Data with ID = " + svcContId + ", " + retvYm + "...");
 
 		try {
 			repository.deleteById(new PK_UsePtrn3monsRetv(svcContId, retvYm));

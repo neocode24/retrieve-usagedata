@@ -1,0 +1,46 @@
+version: '3'
+services:
+  web_redis:
+    build:
+     context: ./retrieve-usagedata-svc
+    ports:
+     - "8001:8080"
+    depends_on: 
+     - redis
+    networks:
+     - network1
+
+  web_db:
+    build:
+     context: ./retrieve-usagedata-db-svc
+    ports:
+     - "8002:8080"
+    depends_on: 
+     - db
+    networks:
+     - network1
+
+  redis:
+    image: "redis:alpine"
+    ports:
+     - "6379:6379"
+    networks:
+     - network1
+
+  db:
+    image: postgres
+    environment:
+     - POSTGRES_DB=testdb
+     - POSTGRES_USER=kos_user
+     - POSTGRES_PASSWORD=new1234!
+     - POSTGRES_INITDB_ARGS=--encoding=UTF-8
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+      # - ./data/data.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+     - network1
+
+networks:
+  network1:

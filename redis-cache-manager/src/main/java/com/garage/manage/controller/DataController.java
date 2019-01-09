@@ -21,7 +21,10 @@ import com.garage.manage.remote.bean.Data_DataSvcDrctlyUseQntList;
 import com.garage.manage.remote.bean.Data_UsePtrn3monsRetv;
 import com.garage.manage.repository.UsageDataRedisRepository;
 
+import lombok.extern.slf4j.Slf4j;
 
+
+@Slf4j
 @RestController
 @RequestMapping("/cache")
 public class DataController {
@@ -32,7 +35,7 @@ public class DataController {
 	@PostMapping("/create/{key}")
 	public ResponseEntity<String> updateCache(@PathVariable("key") String key, @Valid @RequestBody Map requestMap) {
 		
-		System.out.println("Cache Create. key:[" + key + "]");
+		log.debug("Cache Create. key:[" + key + "]");
 		
 		String subSet = key.substring(0, key.indexOf("-"));
 		

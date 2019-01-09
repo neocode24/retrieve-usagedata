@@ -45,9 +45,6 @@ public class RetrieveUsagedataSvcApplicationTests {
         //then
         UsageData savedUsageData = usageDataRedisRepository.findById(key).get();
         
-        System.out.println(savedUsageData.toString());
-        
-        
         assertThat(savedUsageData.getRefreshTime()).isEqualTo(refreshTime);
     }
 

@@ -1,9 +1,9 @@
 com/garage/usagedata/config/RedisRepositoryConfig.class
 com/garage/usagedata/remote/bean/Data_DataSvcDrctlyUseQntList.class
 com/garage/usagedata/controller/UsageDataController$1.class
+com/garage/usagedata/remote/bean/Data_UsePtrn3monsRetv$Data_UsePtrn3monsRetvBuilder.class
 com/garage/usagedata/bean/UsageData.class
 com/garage/usagedata/bean/UsageData$UsageDataBuilder.class
-com/garage/usagedata/bean/UsePtrn3monsRetvRedis.class
 com/garage/usagedata/controller/UsageDataController.class
 com/garage/usagedata/RetrieveUsagedataSvcApplication.class
 com/garage/usagedata/controller/UsageDataController$2.class

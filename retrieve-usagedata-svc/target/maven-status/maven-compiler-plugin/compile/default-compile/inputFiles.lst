@@ -1,8 +1,7 @@
-/Users/NeoCode24/Documents/workspace-ibm-garage/retrieve-usagedata-svc/src/main/java/com/garage/usagedata/controller/UsageDataController.java
-/Users/NeoCode24/Documents/workspace-ibm-garage/retrieve-usagedata-svc/src/main/java/com/garage/usagedata/bean/UsageData.java
-/Users/NeoCode24/Documents/workspace-ibm-garage/retrieve-usagedata-svc/src/main/java/com/garage/usagedata/remote/bean/Data_UsePtrn3monsRetv.java
-/Users/NeoCode24/Documents/workspace-ibm-garage/retrieve-usagedata-svc/src/main/java/com/garage/usagedata/bean/UsePtrn3monsRetvRedis.java
-/Users/NeoCode24/Documents/workspace-ibm-garage/retrieve-usagedata-svc/src/main/java/com/garage/usagedata/repository/UsageDataRedisRepository.java
-/Users/NeoCode24/Documents/workspace-ibm-garage/retrieve-usagedata-svc/src/main/java/com/garage/usagedata/config/RedisRepositoryConfig.java
-/Users/NeoCode24/Documents/workspace-ibm-garage/retrieve-usagedata-svc/src/main/java/com/garage/usagedata/remote/bean/Data_DataSvcDrctlyUseQntList.java
-/Users/NeoCode24/Documents/workspace-ibm-garage/retrieve-usagedata-svc/src/main/java/com/garage/usagedata/RetrieveUsagedataSvcApplication.java
+/Users/neocode24/git/retrieve-usagedata/retrieve-usagedata-svc/src/main/java/com/garage/usagedata/RetrieveUsagedataSvcApplication.java
+/Users/neocode24/git/retrieve-usagedata/retrieve-usagedata-svc/src/main/java/com/garage/usagedata/config/RedisRepositoryConfig.java
+/Users/neocode24/git/retrieve-usagedata/retrieve-usagedata-svc/src/main/java/com/garage/usagedata/controller/UsageDataController.java
+/Users/neocode24/git/retrieve-usagedata/retrieve-usagedata-svc/src/main/java/com/garage/usagedata/repository/UsageDataRedisRepository.java
+/Users/neocode24/git/retrieve-usagedata/retrieve-usagedata-svc/src/main/java/com/garage/usagedata/bean/UsageData.java
+/Users/neocode24/git/retrieve-usagedata/retrieve-usagedata-svc/src/main/java/com/garage/usagedata/remote/bean/Data_DataSvcDrctlyUseQntList.java
+/Users/neocode24/git/retrieve-usagedata/retrieve-usagedata-svc/src/main/java/com/garage/usagedata/remote/bean/Data_UsePtrn3monsRetv.java

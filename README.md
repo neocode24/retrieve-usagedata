@@ -150,7 +150,7 @@ git clone https://github.com/neocode24/retrieve-usagedata.git
       backend:
    ```
 
-   2. docker-compose up
+2. docker-compose up
 
    ```shell
     > docker-compose up --build -d
@@ -165,7 +165,7 @@ git clone https://github.com/neocode24/retrieve-usagedata.git
     Creating retrieve-usagedata-db-svc ... done
    ```
 
-   3. docker-compose down
+3. docker-compose down
 
    ```
     > docker-compose down

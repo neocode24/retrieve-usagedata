@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: redis-cache-manager
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: NeoCode24
+Implementation-Vendor-Id: com.garage
+Build-Jdk: 1.8.0_31
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/manage
+Created-By: Maven Integration for Eclipse
+

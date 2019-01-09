@@ -1,0 +1,8 @@
+/Users/NeoCode24/Documents/workspace-ibm-garage/redis-cache-manager/src/main/java/com/garage/manage/config/EmbeddedRedisConfig.java
+/Users/NeoCode24/Documents/workspace-ibm-garage/redis-cache-manager/src/main/java/com/garage/manage/controller/DataController.java
+/Users/NeoCode24/Documents/workspace-ibm-garage/redis-cache-manager/src/main/java/com/garage/manage/bean/UsageData.java
+/Users/NeoCode24/Documents/workspace-ibm-garage/redis-cache-manager/src/main/java/com/garage/manage/remote/bean/Data_DataSvcDrctlyUseQntList.java
+/Users/NeoCode24/Documents/workspace-ibm-garage/redis-cache-manager/src/main/java/com/garage/manage/remote/bean/Data_UsePtrn3monsRetv.java
+/Users/NeoCode24/Documents/workspace-ibm-garage/redis-cache-manager/src/main/java/com/garage/manage/RedisCacheManagerApplication.java
+/Users/NeoCode24/Documents/workspace-ibm-garage/redis-cache-manager/src/main/java/com/garage/manage/repository/UsageDataRedisRepository.java
+/Users/NeoCode24/Documents/workspace-ibm-garage/redis-cache-manager/src/main/java/com/garage/manage/config/RedisRepositoryConfig.java

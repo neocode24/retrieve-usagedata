@@ -1,0 +1,8 @@
+com/garage/manage/remote/bean/Data_UsePtrn3monsRetv.class
+com/garage/manage/remote/bean/Data_DataSvcDrctlyUseQntList.class
+com/garage/manage/RedisCacheManagerApplication.class
+com/garage/manage/controller/DataController.class
+com/garage/manage/repository/UsageDataRedisRepository.class
+com/garage/manage/config/RedisRepositoryConfig.class
+com/garage/manage/config/EmbeddedRedisConfig.class
+com/garage/manage/bean/UsageData.class

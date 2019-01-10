@@ -163,7 +163,7 @@
    - 단, 시스템 변수로 전달할 수 있음.
 
      ```
-     docker run -p 8080:8080 -it kos-mvp/usagedata -e "SPRING_PROFILES_ACTIVE=local"
+     docker run -p 8080:8080 -e "SPRING_PROFILES_ACTIVE=local" -it kos-mvp/usagedata 
      ```
 
 
